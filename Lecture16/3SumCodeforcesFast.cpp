@@ -31,7 +31,7 @@ int main() {
 
 
 		int na[30] {};
-		int k = 0;//Currently mere na array me kitne elements hain aur new element jo
+		int l = 0;//Currently mere na array me kitne elements hain aur new element jo
 		//aapko add karna hain na array me vo konse index par karna hain.
 
 		//Expand the freq array and fill the na vala array.
@@ -42,8 +42,8 @@ int main() {
 
 			//Idea: Current digit ko na vale array me freq of current digit times daal do.
 			while (cdf > 0) {
-				na[k] = cd;
-				k++;
+				na[l] = cd;
+				l++;
 				cdf--;
 			}
 		}
@@ -51,9 +51,9 @@ int main() {
 		//Now You have your na vala array. Brute force laga sakte ho.
 
 		int flag = 0;
-		for (int i = 0; i < n - 2; i++) {
-			for (int j = i + 1; j < n - 1; j++) {
-				for (int k = j + 1; k < n; k++) {
+		for (int i = 0; i < l - 2; i++) {
+			for (int j = i + 1; j < l - 1; j++) {
+				for (int k = j + 1; k < l; k++) {
 					if ((na[i] + na[j] + na[k]) % 10  == 3) {
 						cout << "Yes" << endl;
 						flag = 1;
